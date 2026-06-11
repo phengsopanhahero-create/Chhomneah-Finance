@@ -27,3 +27,19 @@ export const PROVIDER_LOGOS: Record<string, string> = {
 export function getProviderLogo(providerName: string): string | null {
   return PROVIDER_LOGOS[providerName] ?? null;
 }
+
+/**
+ * Looks up a logo for a service location name such as
+ * "ABA Bank - Siem Reap Branch" by matching it against known
+ * provider names in PROVIDER_LOGOS.
+ */
+export function getLocationLogo(locationName: string): string | null {
+  const exact = PROVIDER_LOGOS[locationName];
+  if (exact) return exact;
+
+  const match = Object.keys(PROVIDER_LOGOS).find(
+    (provider) =>
+      locationName.startsWith(provider) || locationName.includes(provider)
+  );
+  return match ? PROVIDER_LOGOS[match] : null;
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Landmark, Building2, Wallet, Smartphone, ShieldCheck, Clock, MapPin, Navigation } from "lucide-react";
 
@@ -10,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { getLocationLogo } from "@/lib/data/logos";
 import type { ServiceLocationRow } from "@/types/database";
 
 const SERVICE_ICONS = {
@@ -35,6 +37,7 @@ export function ServiceCard({
   const name = isKhmer && location.name_km ? location.name_km : location.name;
   const address =
     isKhmer && location.address_km ? location.address_km : location.address;
+  const logoSrc = getLocationLogo(location.name);
 
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.latitude},${location.longitude}`;
 
@@ -48,8 +51,19 @@ export function ServiceCard({
             </Badge>
             <CardTitle className="lang-km text-base">{name}</CardTitle>
           </div>
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <Icon className="h-5 w-5" />
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary/10 text-primary">
+            {logoSrc ? (
+              <Image
+                src={logoSrc}
+                alt={name}
+                width={40}
+                height={40}
+                unoptimized={logoSrc.endsWith(".svg")}
+                className="h-full w-full bg-white object-contain p-1"
+              />
+            ) : (
+              <Icon className="h-5 w-5" />
+            )}
           </span>
         </div>
       </CardHeader>
