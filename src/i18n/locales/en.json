@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Rural Finance Hub Cambodia",
+    "name": "Chomnes Finance",
     "tagline": "Compare loans, find financial services, and learn about money — in your language."
   },
   "nav": {
@@ -52,7 +52,8 @@
     "apply_now": "Apply Now",
     "data_disclaimer": "Rates and terms are indicative sample data and may not reflect current offers. Confirm with the provider before applying.",
     "source_link": "View official rates",
-    "rates_updated": "Rates last checked"
+    "rates_updated": "Rates last checked",
+    "estimated_rate": "Estimated"
   },
   "finder": {
     "title": "Financial Service Finder",
@@ -125,7 +126,7 @@
   "footer": {
     "rights": "All rights reserved.",
     "about": "About this project",
-    "about_text": "Rural Finance Hub Cambodia helps rural communities make informed financial decisions through accessible information in Khmer and English."
+    "about_text": "Chomnes Finance helps rural communities make informed financial decisions through accessible information in Khmer and English."
   },
   "common": {
     "language": "Language",

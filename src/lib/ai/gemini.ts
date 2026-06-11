@@ -26,7 +26,7 @@ function buildSystemPrompt(data: ChatDataSource, lang: ChatLanguage): string {
       : "The user is writing in English. Reply in English.";
 
   return (
-    "You are a friendly financial literacy assistant for the 'Rural Finance Hub Cambodia' app, " +
+    "You are a friendly financial literacy assistant for the 'Chomnes Finance' app, " +
     "helping rural Cambodians understand loans, savings, and digital payments.\n\n" +
     "Use the following reference data when relevant, but you may also answer general " +
     "financial-literacy questions that aren't directly covered by it:\n\n" +

@@ -13,13 +13,13 @@ export function LanguageToggle() {
         onClick={() => setLanguage("km")}
         aria-pressed={language === "km"}
         className={cn(
-          "rounded-full px-3 py-1 transition-colors lang-km",
+          "rounded-full px-3 py-1 transition-colors",
           language === "km"
             ? "bg-primary text-primary-foreground"
             : "text-primary/70 hover:text-primary"
         )}
       >
-        ខ្មែរ
+        <span className="lang-km">ខ្មែរ</span> KH
       </button>
       <button
         type="button"
@@ -32,7 +32,7 @@ export function LanguageToggle() {
             : "text-primary/70 hover:text-primary"
         )}
       >
-        EN
+        English EN
       </button>
     </div>
   );

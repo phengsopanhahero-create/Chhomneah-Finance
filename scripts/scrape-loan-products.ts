@@ -131,6 +131,15 @@ async function main() {
 
   console.log(`Fetching official websites for ${institutions.length} institution(s)...`);
 
+  // Some sites trigger an internal undici parser assertion that escapes
+  // normal try/catch as an uncaughtException on a later tick (after the
+  // fetch already resolved/rejected) - swallow it globally so one bad site
+  // doesn't abort the whole batch.
+  let lastFatalError: string | null = null;
+  process.on("uncaughtException", (err) => {
+    lastFatalError = err instanceof Error ? err.message : String(err);
+  });
+
   for (const institution of institutions) {
     console.log(`  -> ${institution.name} (${institution.website})`);
     const result: SiteContent = {
@@ -145,6 +154,7 @@ async function main() {
       links: [],
     };
 
+    lastFatalError = null;
     try {
       const html = await fetchHtml(institution.website);
       Object.assign(result, extractContent(html));
@@ -152,7 +162,14 @@ async function main() {
         `     ok - ${result.khmerParagraphs.length} Khmer text blocks, ${result.links.length} relevant links`
       );
     } catch (err) {
-      result.error = (err as Error).message;
+      result.error = err instanceof Error ? err.message : String(err);
+    }
+
+    if (!result.title && lastFatalError) {
+      result.error = lastFatalError;
+    }
+
+    if (result.error && !result.title) {
       console.error(`     failed: ${result.error}`);
     }
 

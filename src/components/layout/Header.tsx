@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Landmark } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { LanguageToggle } from "./LanguageToggle";
 import { cn } from "@/lib/utils";
@@ -23,12 +24,17 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-cream shadow-sm">
+    <header className="sticky top-0 z-40 bg-white shadow-sm">
       <div className="khmer-border-motif" />
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <Landmark className="h-5 w-5" />
+          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full">
+            <Image
+              src="/logos/image_mylogo.png"
+              alt={t("app.name")}
+              fill
+              className="object-contain"
+            />
           </span>
           <span className="text-base font-extrabold leading-tight text-primary lang-km sm:text-lg">
             {t("app.name")}
@@ -66,7 +72,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-secondary/30 bg-cream px-4 py-3 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-secondary bg-white px-4 py-3 md:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

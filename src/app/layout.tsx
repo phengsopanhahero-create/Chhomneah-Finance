@@ -20,7 +20,7 @@ const notoSansKhmer = Noto_Sans_Khmer({
 });
 
 export const metadata: Metadata = {
-  title: "Rural Finance Hub Cambodia | ហាបហ្វាយណែនស៍ហិរញ្ញវត្ថុជនបទ",
+  title: "Chomnes Finance | ចំណេះ Finance",
   description:
     "Compare loans, find financial services, and learn about money — in Khmer and English.",
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#B22222",
+  themeColor: "#1E4E8C",
 };
 
 export default function RootLayout({

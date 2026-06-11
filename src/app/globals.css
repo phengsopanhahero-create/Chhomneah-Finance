@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 42 100% 97%; /* soft cream */
+    --background: 0 0% 100%; /* white */
     --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 13%;
 
-    --muted: 42 60% 94%;
+    --muted: 213 50% 96%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 43 65% 49%; /* gold */
-    --accent-foreground: 30 40% 15%;
+    --accent: 213 64% 33%; /* deep blue */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 43 50% 85%;
-    --input: 43 50% 85%;
-    --ring: 0 68% 42%; /* deep red */
+    --border: 213 40% 90%;
+    --input: 213 40% 90%;
+    --ring: 213 64% 33%; /* deep blue */
 
     --radius: 0.75rem;
   }
@@ -48,23 +48,17 @@
 }
 
 @layer components {
-  /* Traditional Khmer decorative border motif */
+  /* Decorative border accent */
   .khmer-border-motif {
     height: 6px;
     width: 100%;
-    background-image: repeating-linear-gradient(
-      135deg,
-      #daa520 0px,
-      #daa520 10px,
-      #b22222 10px,
-      #b22222 20px
-    );
+    background-color: #1e4e8c;
   }
 
   .khmer-border-motif-thin {
     height: 4px;
     width: 100%;
-    background: linear-gradient(90deg, #b22222 0%, #daa520 50%, #b22222 100%);
+    background: linear-gradient(90deg, #1e4e8c 0%, #5b8fd1 50%, #1e4e8c 100%);
   }
 
   .lang-km {

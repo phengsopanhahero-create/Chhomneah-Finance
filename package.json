@@ -9,7 +9,9 @@
     "lint": "next lint",
     "bot": "tsx scripts/telegram-bot.ts",
     "scrape:locations": "tsx scripts/scrape-locations.ts",
-    "scrape:products": "tsx scripts/scrape-loan-products.ts"
+    "scrape:products": "tsx scripts/scrape-loan-products.ts",
+    "scrape:loan-pages": "tsx scripts/scrape-loan-pages.ts",
+    "scrape:logos": "tsx scripts/scrape-logos.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",

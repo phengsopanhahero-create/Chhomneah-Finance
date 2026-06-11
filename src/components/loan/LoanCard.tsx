@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { Landmark, Building2, Smartphone, ShieldCheck, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 import {
   Card,
@@ -13,14 +14,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { calculateMonthlyPayment, formatCurrencyUSD } from "@/lib/finance";
+import { getProviderLogo } from "@/lib/data/logos";
 import type { LoanProductRow } from "@/types/database";
-
-const PROVIDER_ICONS = {
-  bank: Landmark,
-  mfi: Building2,
-  digital_wallet: Smartphone,
-  insurance: ShieldCheck,
-} as const;
 
 const PROVIDER_FILTER_KEYS = {
   bank: "bank",
@@ -33,7 +28,7 @@ export function LoanCard({ product }: { product: LoanProductRow }) {
   const { t, i18n } = useTranslation();
   const isKhmer = i18n.language === "km";
 
-  const Icon = PROVIDER_ICONS[product.provider_type];
+  const logoSrc = getProviderLogo(product.provider_name);
 
   const productName =
     isKhmer && product.product_name_km
@@ -66,9 +61,18 @@ export function LoanCard({ product }: { product: LoanProductRow }) {
             </CardDescription>
             <CardTitle className="lang-km mt-1">{productName}</CardTitle>
           </div>
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/20 text-secondary">
-            <Icon className="h-5 w-5" />
-          </span>
+          {logoSrc && (
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-1 ring-border">
+              <Image
+                src={logoSrc}
+                alt={product.provider_name}
+                width={40}
+                height={40}
+                unoptimized={logoSrc.endsWith(".svg")}
+                className="h-full w-full object-contain p-1"
+              />
+            </span>
+          )}
         </div>
         {description && (
           <p className="lang-km mt-2 text-sm text-muted-foreground">
@@ -125,9 +129,20 @@ export function LoanCard({ product }: { product: LoanProductRow }) {
       </CardContent>
 
       <CardFooter className="flex flex-col items-start gap-2">
-        <Badge className="lang-km">
-          {t(`loans.filter_${PROVIDER_FILTER_KEYS[product.provider_type]}`)}
-        </Badge>
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge className="lang-km">
+            {t(`loans.filter_${PROVIDER_FILTER_KEYS[product.provider_type]}`)}
+          </Badge>
+          {!product.source_url && (
+            <Badge
+              variant="outline"
+              className="lang-km text-muted-foreground"
+              title={t("loans.data_disclaimer")}
+            >
+              {t("loans.estimated_rate")}
+            </Badge>
+          )}
+        </div>
         <div className="lang-km flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           {product.source_url && (
             <a

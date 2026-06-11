@@ -20,18 +20,18 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#B22222", // deep red
-          foreground: "#FFF8E7",
+          DEFAULT: "#1E4E8C", // deep blue
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#DAA520", // gold
-          foreground: "#3A2A00",
+          DEFAULT: "#E6F0FA", // light blue
+          foreground: "#1E4E8C",
         },
-        cream: "#FFF8E7",
+        cream: "#FFFFFF",
         khmer: {
-          red: "#B22222",
-          gold: "#DAA520",
-          cream: "#FFF8E7",
+          red: "#1E4E8C",
+          gold: "#1E4E8C",
+          cream: "#FFFFFF",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -71,7 +71,7 @@ const config: Config = {
       },
       backgroundImage: {
         "khmer-motif":
-          "repeating-linear-gradient(45deg, #DAA520 0, #DAA520 4px, transparent 4px, transparent 16px)",
+          "repeating-linear-gradient(45deg, #1E4E8C 0, #1E4E8C 4px, transparent 4px, transparent 16px)",
       },
     },
   },

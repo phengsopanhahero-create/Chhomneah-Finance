@@ -121,7 +121,7 @@ function formatEducationTopic(topic: EducationTopicRow, lang: ChatLanguage): str
 function welcomeMessage(lang: ChatLanguage): string {
   if (lang === "km") {
     return (
-      "សួស្តី! ខ្ញុំជាជំនួយការ ហាបហ្វាយណែនស៍ហិរញ្ញវត្ថុជនបទកម្ពុជា។\n\n" +
+      "សួស្តី! ខ្ញុំជាជំនួយការ ចំណេះ Finance។\n\n" +
       "អ្នកអាចសួរខ្ញុំអំពី៖\n" +
       "• កម្ចីពីធនាគារ ឬ MFI (ឧ. \"អត្រាការប្រាក់ ACLEDA\")\n" +
       "• សេវាកម្មនៅជិតអ្នក (ឧ. \"ភ្នាក់ងារ Wing នៅឯណា\")\n" +
@@ -131,7 +131,7 @@ function welcomeMessage(lang: ChatLanguage): string {
   }
 
   return (
-    "Hello! I'm the Rural Finance Hub Cambodia assistant.\n\n" +
+    "Hello! I'm the Chomnes Finance assistant.\n\n" +
     "You can ask me about:\n" +
     "• Loans from banks or MFIs (e.g. \"ACLEDA interest rate\")\n" +
     "• Nearby services (e.g. \"where is a Wing agent\")\n" +

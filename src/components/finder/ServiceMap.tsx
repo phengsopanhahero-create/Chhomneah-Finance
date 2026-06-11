@@ -10,7 +10,7 @@ import type { Coordinates } from "@/lib/hooks/useGeolocation";
 const CAMBODIA_CENTER = { lat: 12.5657, lng: 104.991 };
 
 const SERVICE_COLORS: Record<ServiceLocationRow["service_type"], string> = {
-  bank: "#B22222",
+  bank: "#1E4E8C",
   mfi: "#DAA520",
   wing: "#1E90FF",
   truemoney: "#FF7F00",
