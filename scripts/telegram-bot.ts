@@ -91,7 +91,7 @@ bot.on("message", async (msg) => {
 
   try {
     const data = await loadData();
-    const reply = generateChatResponse(text, data);
+    const reply = await generateChatResponse(text, data);
     await bot.sendMessage(chatId, reply);
   } catch (err) {
     console.error("Error handling message:", err);

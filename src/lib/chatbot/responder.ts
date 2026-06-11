@@ -1,4 +1,5 @@
 import { calculateMonthlyPayment, formatCurrencyUSD } from "@/lib/finance";
+import { generateAiResponse } from "@/lib/ai/gemini";
 import { FALLBACK_LOAN_PRODUCTS } from "@/lib/data/loanProducts";
 import { FALLBACK_SERVICE_LOCATIONS } from "@/lib/data/serviceLocations";
 import { FALLBACK_EDUCATION_TOPICS } from "@/lib/data/education";
@@ -152,13 +153,13 @@ function fallbackMessage(lang: ChatLanguage): string {
 }
 
 /**
- * Generate a chatbot reply for a given user message.
- * Pure function so it can be reused by the Telegram bot script and any API route.
+ * Rule-based chatbot reply for a given user message, or null if no rule matches.
+ * Pure function so it can be reused by the Telegram webhook and any API route.
  */
-export function generateChatResponse(
+export function matchRuleBasedResponse(
   message: string,
   data: ChatDataSource = DEFAULT_DATA_SOURCE
-): string {
+): string | null {
   const trimmed = message.trim();
   const lang = detectLanguage(trimmed);
 
@@ -236,6 +237,27 @@ export function generateChatResponse(
       }
     }
   }
+
+  return null;
+}
+
+/**
+ * Generate a chatbot reply for a given user message.
+ * Tries fast rule-based matching first, then falls back to the AI model
+ * (Gemini) for free-form questions, and finally a static fallback message.
+ */
+export async function generateChatResponse(
+  message: string,
+  data: ChatDataSource = DEFAULT_DATA_SOURCE
+): Promise<string> {
+  const trimmed = message.trim();
+  const lang = detectLanguage(trimmed);
+
+  const ruleBasedReply = matchRuleBasedResponse(trimmed, data);
+  if (ruleBasedReply) return ruleBasedReply;
+
+  const aiReply = await generateAiResponse(trimmed, data, lang);
+  if (aiReply) return aiReply;
 
   return fallbackMessage(lang);
 }
