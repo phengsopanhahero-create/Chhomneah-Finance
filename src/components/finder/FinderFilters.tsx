@@ -61,6 +61,12 @@ export function FinderFilters({
             <SelectItem value="truemoney" className="lang-km">
               {t("finder.type_truemoney")}
             </SelectItem>
+            <SelectItem value="digital_wallet" className="lang-km">
+              {t("finder.type_digital_wallet")}
+            </SelectItem>
+            <SelectItem value="insurance" className="lang-km">
+              {t("finder.type_insurance")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>

@@ -14,6 +14,8 @@ const SERVICE_COLORS: Record<ServiceLocationRow["service_type"], string> = {
   mfi: "#DAA520",
   wing: "#1E90FF",
   truemoney: "#FF7F00",
+  digital_wallet: "#8A2BE2",
+  insurance: "#2E8B57",
 };
 
 const mapContainerStyle = {

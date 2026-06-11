@@ -69,6 +69,9 @@ export function LoanFilters({
             <SelectItem value="digital_wallet" className="lang-km">
               {t("loans.filter_digital")}
             </SelectItem>
+            <SelectItem value="insurance" className="lang-km">
+              {t("loans.filter_insurance")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>

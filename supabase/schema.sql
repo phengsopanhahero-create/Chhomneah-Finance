@@ -6,7 +6,7 @@
 create table if not exists loan_products (
   id uuid primary key default gen_random_uuid(),
   provider_name text not null,
-  provider_type text not null check (provider_type in ('bank', 'mfi', 'digital_wallet')),
+  provider_type text not null check (provider_type in ('bank', 'mfi', 'digital_wallet', 'insurance')),
   product_name text not null,
   product_name_km text,
   interest_rate_min numeric(5,2) not null,
@@ -24,7 +24,7 @@ create table if not exists service_locations (
   id uuid primary key default gen_random_uuid(),
   name text not null,
   name_km text,
-  service_type text not null check (service_type in ('bank', 'mfi', 'wing', 'truemoney')),
+  service_type text not null check (service_type in ('bank', 'mfi', 'wing', 'truemoney', 'digital_wallet', 'insurance')),
   address text not null,
   address_km text,
   latitude double precision not null,

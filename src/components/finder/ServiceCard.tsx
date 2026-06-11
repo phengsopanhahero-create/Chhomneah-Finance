@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Landmark, Building2, Wallet, Smartphone, Clock, MapPin, Navigation } from "lucide-react";
+import { Landmark, Building2, Wallet, Smartphone, ShieldCheck, Clock, MapPin, Navigation } from "lucide-react";
 
 import {
   Card,
@@ -17,6 +17,8 @@ const SERVICE_ICONS = {
   mfi: Building2,
   wing: Wallet,
   truemoney: Smartphone,
+  digital_wallet: Smartphone,
+  insurance: ShieldCheck,
 } as const;
 
 export function ServiceCard({

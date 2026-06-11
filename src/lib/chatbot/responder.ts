@@ -38,6 +38,8 @@ const SERVICE_TYPE_KEYWORDS: Record<ServiceLocationRow["service_type"], string[]
   mfi: ["mfi", "microfinance", "មីក្រូហិរញ្ញវត្ថុ"],
   wing: ["wing"],
   truemoney: ["truemoney", "true money"],
+  digital_wallet: ["digital wallet", "mobile money", "កាបូបឌីជីថល"],
+  insurance: ["insurance", "ធានារ៉ាប់រង"],
 };
 
 const EDUCATION_KEYWORDS: Record<string, string[]> = {

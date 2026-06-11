@@ -64,3 +64,35 @@ npm run bot
 ```
 
 Requires `TELEGRAM_BOT_TOKEN` in `.env.local` (Supabase optional — falls back to static data).
+
+## Data scrapers
+
+The registry of banks, MFIs, digital wallets, and insurers lives in
+[`src/lib/data/institutions.ts`](src/lib/data/institutions.ts). Two scripts
+pull live data for these institutions:
+
+### Branch/agent locations (Google Places API)
+
+```bash
+npm run scrape:locations              # all institutions
+npm run scrape:locations -- --type=bank
+npm run scrape:locations -- --slug=aba-bank --max=10
+```
+
+Requires `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` with **Places API (New)** enabled
+in the Google Cloud Console. Writes results to
+`scripts/output/service_locations.json`, and also upserts into the
+`service_locations` table if `SUPABASE_SERVICE_ROLE_KEY` is set.
+
+### Official website content (loan products & Khmer text)
+
+```bash
+npm run scrape:products                # all institutions
+npm run scrape:products -- --type=mfi
+npm run scrape:products -- --slug=prasac-mfi
+```
+
+Fetches each institution's official site and extracts headings, Khmer text
+blocks, and loan/product links to `scripts/output/site_content/<slug>.json`.
+Bank sites vary widely in structure (and some block bots), so this is a
+research aid for building `loan_products` rows, not a fully automated import.

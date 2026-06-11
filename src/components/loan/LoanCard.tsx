@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Landmark, Building2, Smartphone } from "lucide-react";
+import { Landmark, Building2, Smartphone, ShieldCheck } from "lucide-react";
 
 import {
   Card,
@@ -19,6 +19,14 @@ const PROVIDER_ICONS = {
   bank: Landmark,
   mfi: Building2,
   digital_wallet: Smartphone,
+  insurance: ShieldCheck,
+} as const;
+
+const PROVIDER_FILTER_KEYS = {
+  bank: "bank",
+  mfi: "mfi",
+  digital_wallet: "digital",
+  insurance: "insurance",
 } as const;
 
 export function LoanCard({ product }: { product: LoanProductRow }) {
@@ -118,7 +126,7 @@ export function LoanCard({ product }: { product: LoanProductRow }) {
 
       <CardFooter>
         <Badge className="lang-km">
-          {t(`loans.filter_${product.provider_type === "digital_wallet" ? "digital" : product.provider_type}`)}
+          {t(`loans.filter_${PROVIDER_FILTER_KEYS[product.provider_type]}`)}
         </Badge>
       </CardFooter>
     </Card>

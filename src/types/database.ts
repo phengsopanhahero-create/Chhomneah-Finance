@@ -1,5 +1,11 @@
-export type ProviderType = "bank" | "mfi" | "digital_wallet";
-export type ServiceType = "bank" | "mfi" | "wing" | "truemoney";
+export type ProviderType = "bank" | "mfi" | "digital_wallet" | "insurance";
+export type ServiceType =
+  | "bank"
+  | "mfi"
+  | "wing"
+  | "truemoney"
+  | "digital_wallet"
+  | "insurance";
 
 export interface LoanProductRow {
   id: string;
