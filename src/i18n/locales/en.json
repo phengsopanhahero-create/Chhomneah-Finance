@@ -1,0 +1,130 @@
+{
+  "app": {
+    "name": "Rural Finance Hub Cambodia",
+    "tagline": "Compare loans, find financial services, and learn about money — in your language."
+  },
+  "nav": {
+    "home": "Home",
+    "loans": "Loan Comparison",
+    "finder": "Service Finder",
+    "education": "Learn",
+    "chatbot": "Chat Assistant"
+  },
+  "home": {
+    "hero_title": "Smart Financial Decisions Start Here",
+    "hero_subtitle": "Compare loans from ACLEDA, ABA, Wing and microfinance institutions, find services near you, and build your financial knowledge.",
+    "cta_loans": "Compare Loans",
+    "cta_finder": "Find Services Near Me",
+    "cta_education": "Start Learning",
+    "feature_loans_title": "Loan Comparison",
+    "feature_loans_desc": "Compare interest rates, terms, and monthly payments across banks and MFIs.",
+    "feature_finder_title": "Service Finder",
+    "feature_finder_desc": "Locate nearby bank branches, MFI offices, Wing and TrueMoney agents.",
+    "feature_education_title": "Financial Education",
+    "feature_education_desc": "Learn about interest, savings, loans, and digital payments with simple guides.",
+    "feature_chatbot_title": "Telegram Assistant",
+    "feature_chatbot_desc": "Ask questions anytime via our Telegram chatbot in Khmer or English."
+  },
+  "loans": {
+    "title": "Loan Comparison Tool",
+    "subtitle": "Compare loan products from banks, MFIs, and digital wallets across Cambodia.",
+    "filter_amount": "Loan Amount (USD)",
+    "filter_provider_type": "Provider Type",
+    "filter_all": "All Providers",
+    "filter_bank": "Bank",
+    "filter_mfi": "Microfinance Institution",
+    "filter_digital": "Digital Wallet",
+    "interest_rate": "Interest Rate",
+    "term": "Term",
+    "months": "months",
+    "monthly_payment": "Est. Monthly Payment",
+    "provider_type": "Type",
+    "min_amount": "Min Amount",
+    "max_amount": "Max Amount",
+    "calculator_title": "Monthly Payment Calculator",
+    "calculator_amount": "Loan Amount (USD)",
+    "calculator_term": "Loan Term (months)",
+    "calculator_result": "Estimated Monthly Payment",
+    "no_results": "No loan products match your filters. Try adjusting the amount or provider type.",
+    "per_year": "/ year",
+    "view_details": "View Details",
+    "apply_now": "Apply Now"
+  },
+  "finder": {
+    "title": "Financial Service Finder",
+    "subtitle": "Find banks, MFI offices, Wing and TrueMoney agents near you.",
+    "filter_type": "Service Type",
+    "filter_all": "All Services",
+    "type_bank": "Bank Branch",
+    "type_mfi": "MFI Office",
+    "type_wing": "Wing Agent",
+    "type_truemoney": "TrueMoney Agent",
+    "use_my_location": "Use My Location",
+    "locating": "Locating...",
+    "list_view": "List View",
+    "map_view": "Map View",
+    "distance_away": "{{distance}} km away",
+    "open_hours": "Hours",
+    "address": "Address",
+    "directions": "Get Directions",
+    "no_results": "No services found nearby. Try a different filter.",
+    "location_denied": "Location access denied. Showing all services."
+  },
+  "education": {
+    "title": "Financial Education Center",
+    "subtitle": "Learn the basics of personal finance — at your own pace.",
+    "take_quiz": "Take Quiz",
+    "read_more": "Read More",
+    "quiz_title": "Quick Quiz",
+    "quiz_submit": "Submit Answer",
+    "quiz_correct": "Correct! Well done.",
+    "quiz_incorrect": "Not quite. Try again!",
+    "quiz_next": "Next Question",
+    "quiz_complete": "Quiz Complete!",
+    "quiz_score": "Your Score",
+    "quiz_retry": "Retry Quiz",
+    "back_to_topics": "Back to Topics",
+    "topics": {
+      "interest_rates": {
+        "title": "Understanding Interest Rates",
+        "summary": "Learn what interest rates mean and how they affect your loan repayments."
+      },
+      "loan_risks": {
+        "title": "Loan Risks & Responsible Borrowing",
+        "summary": "Understand the risks of borrowing and how to borrow responsibly."
+      },
+      "savings": {
+        "title": "Building Healthy Savings Habits",
+        "summary": "Simple strategies to start and grow your savings, even with a small income."
+      },
+      "digital_payments": {
+        "title": "Digital Payments & Mobile Money",
+        "summary": "How to safely use Wing, TrueMoney, and other mobile money services."
+      }
+    }
+  },
+  "chatbot": {
+    "title": "Telegram Chat Assistant",
+    "subtitle": "Ask about loans, nearby services, or financial tips — directly from Telegram.",
+    "open_telegram": "Open Telegram Bot",
+    "how_it_works": "How It Works",
+    "step1": "Open the Telegram bot link below.",
+    "step2": "Type your question in Khmer or English.",
+    "step3": "Get instant answers about loans, nearby services, and financial tips.",
+    "sample_questions_title": "Sample Questions You Can Ask",
+    "sample1": "What is the interest rate for ACLEDA loans?",
+    "sample2": "Where is the nearest Wing agent?",
+    "sample3": "What is the difference between a bank and an MFI?"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "about": "About this project",
+    "about_text": "Rural Finance Hub Cambodia helps rural communities make informed financial decisions through accessible information in Khmer and English."
+  },
+  "common": {
+    "language": "Language",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "currency_usd": "USD"
+  }
+}

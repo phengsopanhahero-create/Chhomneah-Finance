@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 100% 97%; /* soft cream */
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --muted: 42 60% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 43 65% 49%; /* gold */
+    --accent-foreground: 30 40% 15%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 43 50% 85%;
+    --input: 43 50% 85%;
+    --ring: 0 68% 42%; /* deep red */
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), var(--font-noto-khmer), sans-serif;
+  }
+
+  [lang="km"] body,
+  html[lang="km"] {
+    font-family: var(--font-noto-khmer), sans-serif;
+  }
+}
+
+@layer components {
+  /* Traditional Khmer decorative border motif */
+  .khmer-border-motif {
+    height: 6px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      135deg,
+      #daa520 0px,
+      #daa520 10px,
+      #b22222 10px,
+      #b22222 20px
+    );
+  }
+
+  .khmer-border-motif-thin {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #b22222 0%, #daa520 50%, #b22222 100%);
+  }
+
+  .lang-km {
+    font-family: var(--font-noto-khmer), sans-serif;
+  }
+}
