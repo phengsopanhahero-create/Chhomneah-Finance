@@ -21,6 +21,8 @@ export interface LoanProductRow {
   max_amount: number;
   description: string | null;
   description_km: string | null;
+  source_url: string | null;
+  rates_last_updated: string | null;
   created_at: string;
 }
 

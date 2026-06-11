@@ -49,7 +49,10 @@
     "no_results": "No loan products match your filters. Try adjusting the amount or provider type.",
     "per_year": "/ year",
     "view_details": "View Details",
-    "apply_now": "Apply Now"
+    "apply_now": "Apply Now",
+    "data_disclaimer": "Rates and terms are indicative sample data and may not reflect current offers. Confirm with the provider before applying.",
+    "source_link": "View official rates",
+    "rates_updated": "Rates last checked"
   },
   "finder": {
     "title": "Financial Service Finder",

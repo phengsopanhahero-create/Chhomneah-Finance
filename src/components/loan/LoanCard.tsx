@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Landmark, Building2, Smartphone, ShieldCheck } from "lucide-react";
+import { Landmark, Building2, Smartphone, ShieldCheck, ExternalLink } from "lucide-react";
 
 import {
   Card,
@@ -124,10 +124,28 @@ export function LoanCard({ product }: { product: LoanProductRow }) {
         </div>
       </CardContent>
 
-      <CardFooter>
+      <CardFooter className="flex flex-col items-start gap-2">
         <Badge className="lang-km">
           {t(`loans.filter_${PROVIDER_FILTER_KEYS[product.provider_type]}`)}
         </Badge>
+        <div className="lang-km flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+          {product.source_url && (
+            <a
+              href={product.source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-primary underline-offset-2 hover:underline"
+            >
+              {t("loans.source_link")}
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
+          {product.rates_last_updated && (
+            <span>
+              {t("loans.rates_updated")}: {product.rates_last_updated}
+            </span>
+          )}
+        </div>
       </CardFooter>
     </Card>
   );

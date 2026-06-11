@@ -17,6 +17,8 @@ create table if not exists loan_products (
   max_amount numeric(12,2) not null,
   description text,
   description_km text,
+  source_url text,
+  rates_last_updated date,
   created_at timestamptz not null default now()
 );
 

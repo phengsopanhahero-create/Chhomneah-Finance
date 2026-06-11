@@ -50,6 +50,10 @@ export default function LoansPage() {
           <LoanFilters value={filters} onChange={setFilters} />
         </div>
 
+        <p className="lang-km rounded-lg border border-dashed border-border bg-muted/50 p-3 text-center text-xs text-muted-foreground">
+          {t("loans.data_disclaimer")}
+        </p>
+
         {loading && (
           <p className="lang-km text-center text-muted-foreground">
             {t("common.loading")}

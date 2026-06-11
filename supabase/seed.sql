@@ -3,44 +3,44 @@
 
 -- Loan Products
 insert into loan_products
-  (provider_name, provider_type, product_name, product_name_km, interest_rate_min, interest_rate_max, term_min_months, term_max_months, min_amount, max_amount, description, description_km)
+  (provider_name, provider_type, product_name, product_name_km, interest_rate_min, interest_rate_max, term_min_months, term_max_months, min_amount, max_amount, description, description_km, source_url, rates_last_updated)
 values
   ('ACLEDA Bank', 'bank', 'SME Business Loan', 'កម្ចីអាជីវកម្ម SME', 8.5, 14.0, 6, 60, 500, 50000,
     'Flexible business loan for small and medium enterprises with collateral options.',
-    'កម្ចីអាជីវកម្មបត់បែនសម្រាប់សហគ្រាសខ្នាតតូច និងមធ្យម ជាមួយជម្រើសវត្ថុបញ្ចាំ។'),
+    'កម្ចីអាជីវកម្មបត់បែនសម្រាប់សហគ្រាសខ្នាតតូច និងមធ្យម ជាមួយជម្រើសវត្ថុបញ្ចាំ។', null, null),
   ('ACLEDA Bank', 'bank', 'Personal Loan', 'កម្ចីផ្ទាល់ខ្លួន', 12.0, 18.0, 3, 36, 200, 10000,
     'Quick personal loan for emergencies, education, or family needs.',
-    'កម្ចីផ្ទាល់ខ្លួនលឿនសម្រាប់ករណីបន្ទាន់ ការអប់រំ ឬតម្រូវការគ្រួសារ។'),
+    'កម្ចីផ្ទាល់ខ្លួនលឿនសម្រាប់ករណីបន្ទាន់ ការអប់រំ ឬតម្រូវការគ្រួសារ។', null, null),
   ('ABA Bank', 'bank', 'ABA Quick Loan', 'កម្ចីលឿន ABA', 9.0, 15.0, 6, 48, 300, 30000,
     'Fast approval personal and business loans through ABA mobile app.',
-    'កម្ចីផ្ទាល់ខ្លួន និងអាជីវកម្ម ដែលអនុម័តលឿនតាមរយៈកម្មវិធី ABA Mobile។'),
+    'កម្ចីផ្ទាល់ខ្លួន និងអាជីវកម្ម ដែលអនុម័តលឿនតាមរយៈកម្មវិធី ABA Mobile។', null, null),
   ('ABA Bank', 'bank', 'Home Improvement Loan', 'កម្ចីជួសជុលផ្ទះ', 10.5, 16.0, 12, 84, 1000, 40000,
     'Loan for home renovation and construction with flexible repayment.',
-    'កម្ចីសម្រាប់ជួសជុល និងសាងសង់ផ្ទះ ជាមួយការសងត្រលប់បត់បែន។'),
+    'កម្ចីសម្រាប់ជួសជុល និងសាងសង់ផ្ទះ ជាមួយការសងត្រលប់បត់បែន។', null, null),
   ('Wing Bank', 'digital_wallet', 'Wing Instant Loan', 'កម្ចីលឿន Wing', 18.0, 28.0, 1, 12, 20, 2000,
     'Instant micro-loan disbursed directly to your Wing account.',
-    'កម្ចីខ្នាតតូចលឿនៗ ដាក់ប្រាក់ដោយផ្ទាល់ទៅគណនី Wing របស់អ្នក។'),
+    'កម្ចីខ្នាតតូចលឿនៗ ដាក់ប្រាក់ដោយផ្ទាល់ទៅគណនី Wing របស់អ្នក។', null, null),
   ('Wing Bank', 'digital_wallet', 'Wing SME Loan', 'កម្ចី SME របស់ Wing', 15.0, 22.0, 3, 24, 100, 10000,
     'Small business loan for Wing merchant partners.',
-    'កម្ចីអាជីវកម្មខ្នាតតូចសម្រាប់ដៃគូឈ្មួញ Wing។'),
+    'កម្ចីអាជីវកម្មខ្នាតតូចសម្រាប់ដៃគូឈ្មួញ Wing។', null, null),
   ('AMK Microfinance', 'mfi', 'Rural Agriculture Loan', 'កម្ចីកសិកម្មជនបទ', 14.0, 24.0, 6, 36, 100, 5000,
     'Loan designed for farmers to purchase seeds, fertilizer, and equipment.',
-    'កម្ចីសម្រាប់កសិករទិញគ្រាប់ពូជ ជី និងឧបករណ៍កសិកម្ម។'),
+    'កម្ចីសម្រាប់កសិករទិញគ្រាប់ពូជ ជី និងឧបករណ៍កសិកម្ម។', null, null),
   ('AMK Microfinance', 'mfi', 'Women Empowerment Loan', 'កម្ចីពង្រឹងសិទ្ធិនារី', 13.0, 22.0, 6, 24, 50, 3000,
     'Microloan for women entrepreneurs starting or growing a small business.',
-    'កម្ចីខ្នាតតូចសម្រាប់សហគ្រិនីស្ត្រី ចាប់ផ្តើម ឬពង្រីកអាជីវកម្មខ្នាតតូច។'),
+    'កម្ចីខ្នាតតូចសម្រាប់សហគ្រិនីស្ត្រី ចាប់ផ្តើម ឬពង្រីកអាជីវកម្មខ្នាតតូច។', null, null),
   ('PRASAC MFI', 'mfi', 'Housing Loan', 'កម្ចីលំនៅដ្ឋាន', 12.5, 20.0, 12, 120, 500, 30000,
     'Long-term loan for building or purchasing a rural home.',
-    'កម្ចីរយៈពេលវែងសម្រាប់សាងសង់ ឬទិញផ្ទះនៅជនបទ។'),
+    'កម្ចីរយៈពេលវែងសម្រាប់សាងសង់ ឬទិញផ្ទះនៅជនបទ។', null, null),
   ('PRASAC MFI', 'mfi', 'Group Solidarity Loan', 'កម្ចីសាមគ្គីភាពជាក្រុម', 16.0, 26.0, 3, 18, 50, 1000,
     'Small group-based loan with shared responsibility, ideal for first-time borrowers.',
-    'កម្ចីខ្នាតតូចជាក្រុម ដែលមានការទទួលខុសត្រូវរួមគ្នា សមរម្យសម្រាប់អ្នកខ្ចីលើកដំបូង។'),
+    'កម្ចីខ្នាតតូចជាក្រុម ដែលមានការទទួលខុសត្រូវរួមគ្នា សមរម្យសម្រាប់អ្នកខ្ចីលើកដំបូង។', null, null),
   ('Sathapana Bank', 'bank', 'Sathapana Agri Loan', 'កម្ចីកសិកម្ម Sathapana', 11.0, 17.0, 6, 60, 200, 20000,
     'Agricultural loan with seasonal repayment options for farming households.',
-    'កម្ចីកសិកម្មជាមួយជម្រើសសងត្រលប់តាមរដូវកាល សម្រាប់គ្រួសារកសិករ។'),
+    'កម្ចីកសិកម្មជាមួយជម្រើសសងត្រលប់តាមរដូវកាល សម្រាប់គ្រួសារកសិករ។', null, null),
   ('TrueMoney', 'digital_wallet', 'TrueMoney Cash Advance', 'ប្រាក់ឥណទាន TrueMoney', 20.0, 30.0, 1, 6, 10, 500,
     'Short-term cash advance for everyday needs via TrueMoney wallet.',
-    'ប្រាក់ឥណទានរយៈពេលខ្លីសម្រាប់តម្រូវការប្រចាំថ្ងៃ តាមរយៈកាបូប TrueMoney។');
+    'ប្រាក់ឥណទានរយៈពេលខ្លីសម្រាប់តម្រូវការប្រចាំថ្ងៃ តាមរយៈកាបូប TrueMoney។', null, null);
 
 -- Service Locations (sample coordinates around Cambodia: Phnom Penh, Siem Reap, Battambang, Kampong Cham)
 insert into service_locations

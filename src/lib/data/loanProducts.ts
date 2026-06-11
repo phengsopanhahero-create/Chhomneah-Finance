@@ -21,6 +21,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
       "Flexible business loan for small and medium enterprises with collateral options.",
     description_km:
       "កម្ចីអាជីវកម្មបត់បែនសម្រាប់សហគ្រាសខ្នាតតូច និងមធ្យម ជាមួយជម្រើសវត្ថុបញ្ចាំ។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -38,6 +40,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     description: "Quick personal loan for emergencies, education, or family needs.",
     description_km:
       "កម្ចីផ្ទាល់ខ្លួនលឿនសម្រាប់ករណីបន្ទាន់ ការអប់រំ ឬតម្រូវការគ្រួសារ។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -55,6 +59,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     description: "Fast approval personal and business loans through ABA mobile app.",
     description_km:
       "កម្ចីផ្ទាល់ខ្លួន និងអាជីវកម្ម ដែលអនុម័តលឿនតាមរយៈកម្មវិធី ABA Mobile។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -71,6 +77,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     max_amount: 40000,
     description: "Loan for home renovation and construction with flexible repayment.",
     description_km: "កម្ចីសម្រាប់ជួសជុល និងសាងសង់ផ្ទះ ជាមួយការសងត្រលប់បត់បែន។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -88,6 +96,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     description: "Instant micro-loan disbursed directly to your Wing account.",
     description_km:
       "កម្ចីខ្នាតតូចលឿនៗ ដាក់ប្រាក់ដោយផ្ទាល់ទៅគណនី Wing របស់អ្នក។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -104,6 +114,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     max_amount: 10000,
     description: "Small business loan for Wing merchant partners.",
     description_km: "កម្ចីអាជីវកម្មខ្នាតតូចសម្រាប់ដៃគូឈ្មួញ Wing។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -121,6 +133,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     description:
       "Loan designed for farmers to purchase seeds, fertilizer, and equipment.",
     description_km: "កម្ចីសម្រាប់កសិករទិញគ្រាប់ពូជ ជី និងឧបករណ៍កសិកម្ម។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -139,6 +153,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
       "Microloan for women entrepreneurs starting or growing a small business.",
     description_km:
       "កម្ចីខ្នាតតូចសម្រាប់សហគ្រិនីស្ត្រី ចាប់ផ្តើម ឬពង្រីកអាជីវកម្មខ្នាតតូច។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -155,6 +171,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     max_amount: 30000,
     description: "Long-term loan for building or purchasing a rural home.",
     description_km: "កម្ចីរយៈពេលវែងសម្រាប់សាងសង់ ឬទិញផ្ទះនៅជនបទ។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -173,6 +191,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
       "Small group-based loan with shared responsibility, ideal for first-time borrowers.",
     description_km:
       "កម្ចីខ្នាតតូចជាក្រុម ដែលមានការទទួលខុសត្រូវរួមគ្នា សមរម្យសម្រាប់អ្នកខ្ចីលើកដំបូង។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -191,6 +211,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
       "Agricultural loan with seasonal repayment options for farming households.",
     description_km:
       "កម្ចីកសិកម្មជាមួយជម្រើសសងត្រលប់តាមរដូវកាល សម្រាប់គ្រួសារកសិករ។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
   {
@@ -208,6 +230,8 @@ export const FALLBACK_LOAN_PRODUCTS: LoanProductRow[] = [
     description: "Short-term cash advance for everyday needs via TrueMoney wallet.",
     description_km:
       "ប្រាក់ឥណទានរយៈពេលខ្លីសម្រាប់តម្រូវការប្រចាំថ្ងៃ តាមរយៈកាបូប TrueMoney។",
+    source_url: null,
+    rates_last_updated: null,
     created_at: "",
   },
 ];
